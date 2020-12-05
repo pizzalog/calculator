@@ -7,50 +7,65 @@ const rl = require('readline').createInterface({
 const calc = new Calculator();
 const recursiveAsyncReadLine = function () {
   rl.question('Calculator Input: ', function (answer) {
+  	let currentInputs;
   	switch(answer) {
   		case 'exit':
-  			return r1.close();
+  			return rl.close();
 		case 'c':
-			calc.clear();
+			currentInputs = calc.clear();
+			console.log('current inputs: ', currentInputs);
 			break;
 		case '=':
-			calc.calculate();
+			const result = calc.calculate();
+			console.log('result: ', result);
 			break;
 		case '+':
-			calc.takeInput('+');
+			currentInputs = calc.takeInput('+');
+			console.log('current inputs: ', currentInputs);
 			break;
 		case '-':
-			calc.takeInput('-');
+			currentInputs = calc.takeInput('-');
+			console.log('current inputs: ', currentInputs);
 			break;
-		case 0:
-			calc.takeInput(0);
+		case '0':
+			currentInputs = calc.takeInput(0);
+			console.log('current inputs: ', currentInputs);
 			break;
-		case 1:
-			calc.takeInput(1);
+		case '1':
+			currentInputs = calc.takeInput(1);
+			console.log('current inputs: ', currentInputs);
 			break;
-		case 2:
-			calc.takeInput(2);
+		case '2':
+			currentInputs = calc.takeInput(2);
+			console.log('current inputs: ', currentInputs);
 			break;
-		case 3:
-			calc.takeInput(3);
+		case '3':
+			currentInputs = calc.takeInput(3);
+			console.log('current inputs: ', currentInputs);
 			break;
-		case 4:
-			calc.takeInput(4);
+		case '4':
+			currentInputs = calc.takeInput(4);
+			console.log('current inputs: ', currentInputs);
 			break;
-		case 5:
-			calc.takeInput(5);
+		case '5':
+			currentInputs = calc.takeInput(5);
+			console.log('current inputs: ', currentInputs);
 			break;
-		case 6:
-			calc.takeInput(6);
+		case '6':
+			currentInputs = calc.takeInput(6);
+			console.log('current inputs: ', currentInputs);
 			break;
-		case 7:
-			calc.takeInput(7);
+		case '7':
+			currentInputs = calc.takeInput(7);
+			console.log('current inputs: ', currentInputs);
 			break;
-		case 8:
-			calc.takeInput(8);
+		case '8':
+			currentInputs = calc.takeInput(8);
+			console.log('current inputs: ', currentInputs);
 			break;
-		case 9:
-			calc.takeInput(9);
+		case '9':
+			currentInputs = calc.takeInput(9);
+			console.log('current inputs: ', currentInputs);
 			break;
 		default:
 			break;
